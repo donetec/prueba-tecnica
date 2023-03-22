@@ -11,7 +11,6 @@ public class Wikipedia_Page extends General_Page {
     private static WebDriver driver = inicio();
 
     public static void buscar(String busqueda, String urlBuscador) {
-
         driver.get(urlBuscador);
 
         WebElement webElement = driver.findElement(By.xpath("//button/div[text() = 'Aceptar todo']"));
@@ -28,7 +27,6 @@ public class Wikipedia_Page extends General_Page {
     public static void navegarAlResultado(String web) {
         WebElement webElement = driver.findElement(By.xpath("(//a/h3[contains(text(), '" + web + "') and contains(text(), 'Automatización')])[1]"));
         webElement.click();
-
     }
 
     public static void comprobar(String anio) throws IOException {
